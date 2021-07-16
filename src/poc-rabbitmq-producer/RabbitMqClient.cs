@@ -8,7 +8,7 @@ namespace poc_rabbitmq_producer
     public class RabbitMqClient
     {
         private readonly string _rabbitMqUrl = "amqp://guest:guest@localhost:5672";
-        private readonly string _queueName = "RabbitMqQueue-Guilherme-one";
+        private readonly string _queueName = "RabbitMqQueue-hello-world";
         private readonly IConnection _connection;
         private readonly IModel _model;
 

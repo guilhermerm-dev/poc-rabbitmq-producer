@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace poc_rabbitmq_producer
 {
@@ -14,7 +15,8 @@ namespace poc_rabbitmq_producer
             {
                 var message = string.Concat($"Olá, mundo! nº {i} - {DateTime.Now}");
                 rabbitMqClient.Publish(message);
-                Console.WindowLine("Message Sended with success");
+                Console.WriteLine("Message Sended with success");
+                Thread.Sleep(10000);
             }
 
             Console.ReadKey();
